@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+    mynodeapp:
+        build: .
+        container_name: mynodeapp
+        volumes: 
+         - "./:/workdir"
+         - /workdir/node_modules
+        ports:
+         - '8060:8060'
